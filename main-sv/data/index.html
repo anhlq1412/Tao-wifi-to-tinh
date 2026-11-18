@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>ROBOT MEDIA</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+</style>
+
+</head>
+
+<body>
+
+<video id="myVideo"
+       autoplay
+       muted
+       loop
+       playsinline
+       controls>
+
+  <source src="/video.mp4" type="video/mp4">
+
+  Trinh duyet khong ho tro video!
+</video>
+
+<script>
+
+const video = document.getElementById("myVideo");
+
+// Thu phat video tu dong
+video.play().catch(error => {
+  console.log("Trinh duyet yeu cau bam Play:", error);
+});
+
+</script>
+
+</body>
+</html>
